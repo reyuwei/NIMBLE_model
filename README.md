@@ -5,32 +5,42 @@ NIMBLE: A Non-rigid Hand Model with Bones and Muscles
 
 We present NIMBLE, a non-rigid parametric hand model that includes bones and muscles, bringing 3D hand model to a new level of realism. By enforcing the inner bones and muscles to match anatomic and kinematic rules, NIMBLE can animate 3D hands to new poses at unprecedented realism.
 
-To learn about PIANO, please visit our website: https://liyuwei.cc/proj/nimble
+To learn about NIMBLE, please visit our website: https://liyuwei.cc/proj/nimble
 
 You can find the NIMBLE paper at: https://arxiv.org/abs/2202.04533
 
 
-For comments or questions, please email us at: Yuwei Li (liyw@shanghaitech.edu.cn)
-
 ---
+## Requirements:
+1. numpy
+2. Pytorch
+3. Pytorch3d
+4. opencv-python
+5. trimesh (with pyembree for faster collision detection)
+
+
 ## Getting Started:
 
-> python demo.py
+1. Download model files from [here](https://drive.google.com/drive/folders/1g7DWuDW5nYI2VDbdemDK2dGVwVHV2a1X?usp=sharing).
+2. `python demo.py` 
+   - ***_bone.obj**: bone mesh
+   - ***_joint.xyz**: joints (order see [here](https://github.com/reyuwei/PIANO_mri_data/raw/master/piano_joint_id.png))
+   - ***_muscle.obj**: muscle mesh
+   - ***_skin.obj/mtl**: skin mesh with diffuse texture
+   - ***_diffuse/normal/spec.png**: texture images
+   - ***_manov.xyz**: corresponding skin vertices in [MANO](http://mano.is.tue.mpg.de/) topology
+3. Render in `assets/render.blend` 
+   - Scale down the meshes and manually assign texture images.
+   - Select `non-color` for color space of normal and specular textures. 
 
-## Requirements
-1. Pytorch3d
-2. Pytorch
-3. trimesh (with pyembree for faster collision detection)
-4. opencv-python
+## Notes:
+1. Use `handle_collision=True` to make sure skin is always outside muscle. Otherwise, skin and muscle might collide. 
 
-## Files
-1. Blender rendering file
-2. Model files
 
-## Acknowledgements:
+## Acknowledgements
 
 This model and code was developped and used for the paper *NIMBLE: A Non-rigid Hand Model with Bones and Muscles* for SIGGRAPH22.
-See [project page](https://liyuwei.cc/proj/nimble)
+See [project page](https://liyuwei.cc/proj/nimble).
 
 It reuses part of the great code from 
 [manopth](https://github.com/hassony2/manopth/blob/master/manopth) by [Yana Hasson](https://hassony2.github.io/),
