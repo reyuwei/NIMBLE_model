@@ -32,6 +32,8 @@ You can find the NIMBLE paper at: https://arxiv.org/abs/2202.04533
 3. Render in `assets/render.blend` 
    - Scale down the meshes and manually assign texture images.
    - Select `non-color` for color space of normal and specular textures. 
+   - Change mesh to `shade smooth`.
+   - Adjust normal map strength.
 
 ## Notes:
 1. Use `handle_collision=True` to make sure skin is always outside muscle. Otherwise, skin and muscle might collide. 
