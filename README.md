@@ -53,7 +53,7 @@ It reuses part of the great code from
 If you find this code useful for your research, consider citing:
 
 ```
-@article{10.1145/3528223.3530079,
+@article{li2022nimble,
         author = {Li, Yuwei and Zhang, Longwen and Qiu, Zesong and Jiang, 
             Yingwenqi and Li, Nianyi and Ma, Yuexin and Zhang, Yuyao and
             Xu, Lan and Yu, Jingyi},
