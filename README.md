@@ -37,7 +37,7 @@ You can find the NIMBLE paper at: https://arxiv.org/abs/2202.04533
 
 ## Notes:
 1. Use `handle_collision=True` to make sure skin is always outside muscle. Otherwise, skin and muscle might collide. 
-
+2. Joint order see [PIANO Dataset](https://github.com/reyuwei/PIANO_mri_data?tab=readme-ov-file#joint-id).
 
 ## Acknowledgements
 
